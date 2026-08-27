@@ -1,0 +1,39 @@
+Questão 01: Os principais métodos para criar, editar e remover elementos HTML usando JavaScript são createElement(), 
+appendChild() e append() para criar e adicionar novos elementos ao DOM. Para editar elementos, podemos utilizar 
+textContent para alterar textos, innerHTML para modificar conteúdos HTML, setAttribute() para alterar atributos e 
+classList para manipular classes CSS. Já para remover elementos, os métodos mais utilizados são remove() e removeChild(). 
+Dessa forma, o JavaScript permite modificar dinamicamente a estrutura e o conteúdo de uma página HTML.
+
+
+Questão02: O JavaScript executado no navegador é usado principalmente para interagir com páginas web, permitindo 
+alterar elementos HTML, estilos e responder a eventos do usuário. Já o JavaScript executado no Node.js roda fora 
+do navegador e é utilizado principalmente no desenvolvimento de servidores, APIs, automações e aplicações. Portanto, 
+a principal diferença está no ambiente de execução e nos recursos disponíveis em cada um.
+
+
+Q13: O objeto document representa o documento HTML que está sendo exibido no navegador. 
+Ele permite que o JavaScript acesse e manipule os elementos da página, como formulários,
+ campos de texto e outros elementos HTML.
+
+No código da questão anterior, por exemplo, document.getElementById("idade") é utilizado para localizar o 
+campo de idade através do seu id e, com .value, obter o valor digitado pelo usuário. 
+Também é utilizado document.getElementById("meuForm").remove() para localizar e remover o 
+formulário da página.
+
+Portanto, o objeto document funciona como uma forma de comunicação entre o JavaScript e 
+os elementos presentes no HTML.
+
+
+Q14: Uma resposta no mesmo estilo, considerando o que você está estudando:
+O ambiente de execução do JavaScript na Web é diferente do ambiente do Node.js porque cada um 
+possui recursos e objetivos diferentes. No navegador, o JavaScript é executado dentro de uma 
+página web e possui acesso a objetos como o document e o window, permitindo manipular elementos 
+do HTML e interagir com a página.
+
+Já no Node.js, o JavaScript é executado fora do navegador e não possui o objeto document por padrão.
+ Ele é utilizado principalmente para criar aplicações no servidor, trabalhar com arquivos, banco de 
+ dados, APIs e outras funcionalidades.
+
+Portanto, a principal diferença é que o JavaScript no navegador possui recursos para interagir 
+diretamente com a página HTML, enquanto o Node.js possui recursos voltados para a execução do 
+JavaScript fora do navegador.

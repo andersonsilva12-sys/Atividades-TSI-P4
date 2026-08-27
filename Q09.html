@@ -1,0 +1,94 @@
+<div id="main" class="h-screen flex items-center justify-center">
+    <form 
+        class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        id="meuForm"
+        action=""
+        method="get"
+    >
+        <div class="mb-4">
+            <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="valor1"
+            >
+                Escolha o primeiro valor:
+            </label>
+
+            <select
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="valor1"
+                id="valor1"
+            >
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+
+
+        <div class="mb-4">
+            <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="valor2"
+            >
+                Escolha o segundo valor:
+            </label>
+
+            <select
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="valor2"
+                id="valor2"
+            >
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+
+
+        <div class="flex items-center justify-center">
+            <input
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit"
+                value="Enviar"
+            >
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("meuForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let valor1Input = document.getElementById("valor1");
+        let valor2Input = document.getElementById("valor2");
+
+        let valor1 = valor1Input.value === "true";
+        let valor2 = valor2Input.value === "true";
+
+        let resultadoAnd = valor1 && valor2;
+        let resultadoOr = valor1 || valor2;
+        let resultadoNot1 = !valor1;
+        let resultadoNot2 = !valor2;
+
+
+        document.getElementById("meuForm").remove();
+
+        document.getElementById("main").innerHTML = `
+            <div class="min-w-80 bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+                <h1 class="font-bold mb-4">
+                    Resultado:
+                </h1>
+
+                <p>Primeiro valor: ${valor1}</p>
+                <p>Segundo valor: ${valor2}</p>
+
+                <br>
+
+                <p>AND: ${resultadoAnd}</p>
+                <p>OR: ${resultadoOr}</p>
+                <p>NOT do primeiro valor: ${resultadoNot1}</p>
+                <p>NOT do segundo valor: ${resultadoNot2}</p>
+            </div>
+        `;
+    });
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
